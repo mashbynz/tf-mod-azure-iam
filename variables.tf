@@ -18,6 +18,12 @@ variable "assignable_scope" {
   default     = ""
 }
 
+variable "role_definition" {
+  type        = string
+  description = ""
+  default     = ""
+}
+
 variable "ad_group_id" {
   type        = string
   description = ""

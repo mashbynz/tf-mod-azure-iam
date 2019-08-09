@@ -1,9 +1,10 @@
-resource "azurerm_role_assignment" "Owner" {
-  scope              = var.assignable_scope
-  role_definition_id = data.azurerm_builtin_role_definition.Owner.id
-  #   role_definition_id = data.azurerm_role_definition.Owner.id
-  principal_id = var.ad_group_id
+resource "azurerm_role_assignment" "default" {
+  scope = var.assignable_scope
+  #   role_definition_id = data.azurerm_builtin_role_definition.Owner.id
+  role_definition_id = var.role_definition
+  principal_id       = var.ad_group_id
 }
+
 
 # data "azurerm_subscription" "default" {
 #   subscription_id = var.subscription_id
