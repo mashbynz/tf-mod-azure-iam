@@ -1,7 +1,7 @@
 resource "azurerm_role_assignment" "default" {
   scope = var.assignable_scope
   #   role_definition_id = data.azurerm_builtin_role_definition.Owner.id
-  name         = var.role_definition
+  role_definition_name         = var.role_definition
   principal_id = var.ad_group_id
 }
 
